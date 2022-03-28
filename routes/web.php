@@ -16,12 +16,12 @@
 use Laravel\Lumen\Routing\Router;
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    return view('frontend');
 });
 $router->group(['prefix' => 'api'], function () use ($router) {
     $router->get('/books', 'Book\BookController@index');
     $router->get('/books/{id}', 'Book\BookController@show');
     $router->get('/comments', 'Comment\CommentController@index');
-    $router->post('/comment', 'Comment\CommentController@store');
+    $router->post('/comments', 'Comment\CommentController@store');
     $router->get('/characters', 'Character\CharacterController@index');
 });

@@ -3,6 +3,7 @@
 namespace App\Traits;
 
 use GuzzleHttp\Client;
+use GuzzleHttp\Exception\GuzzleException;
 
 trait ServiceTrait
 {
@@ -10,13 +11,22 @@ trait ServiceTrait
 
     public function performRequest($method, $url, $formParams = [], $headers = [])
     {
-        $client = new Client([
-            'base_uri' => $this->baseUrl,
-        ]);
-        $response = $client->request($method, $url, [
-            'query' => $formParams,
-            'headers' => $headers,
-        ]);
-        return $response->getBody()->getContents();
+        try {
+            $client = new Client([
+                'base_uri' => $this->baseUrl,
+            ]);
+            $response = $client->{strtolower($method)}($url, [
+                'query' => $formParams,
+                'headers' => $headers,
+            ]);
+            $response = json_decode($response->getBody()->getContents());
+            return response()->json($response);
+        } catch (GuzzleException $e) {
+            return response()->json([
+                'message' => 'error fetching records',
+                'error' => $e->getMessage(),
+                'status' => $e->getCode()
+            ], $e->getCode());
+        }
     }
 }
