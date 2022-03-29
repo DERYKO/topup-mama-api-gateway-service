@@ -6,7 +6,7 @@
         <div class="flex flex-row">
             <div class="flex w-1/2 flex-col p-1">
                 <h6>Characters</h6>
-                <div class="flex flex-1 p-10">
+                <div class="flex flex-1 p-1">
                     <select v-model="sort_field" class="form-select appearance-none block
       w-full
       px-3
@@ -20,7 +20,8 @@
       transition
       ease-in-out
       m-0
-      focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none">
+      focus:text-gray-700 mr-2 focus:bg-white focus:border-blue-600 focus:outline-none">
+                        <option value="">Field</option>
                         <option value="name">Name</option>
                         <option value="age">Age</option>
                         <option value="gender">Gender</option>
@@ -39,11 +40,12 @@
       ease-in-out
       m-0
       focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none">
+                        <option value="">Direction</option>
                         <option value="ascending">Ascending</option>
                         <option value="descending">Descending</option>
                     </select>
                 </div>
-                <div class="flex flex-1 p-10">
+                <div class="flex flex-1 p-1">
                     <select v-model="gender" class="form-select appearance-none block
       w-full
       px-3
