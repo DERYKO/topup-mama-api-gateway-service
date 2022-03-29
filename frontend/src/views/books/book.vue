@@ -154,7 +154,7 @@ export default {
         gender(val) {
             this.getCharacter({
                 book_id: this.book.url.charAt(this.book.url.length - 1),
-                gender_filter: val,
+                gender: val,
                 sort_field: this.sort_field,
                 sort_dir: this.sort_dir
             })
@@ -163,7 +163,7 @@ export default {
             if (this.sort_dir) {
                 this.getCharacter({
                     book_id: this.book.url.charAt(this.book.url.length - 1),
-                    gender_filter: val,
+                    gender: val,
                     sort_field: this.sort_field,
                     sort_dir: this.sort_dir
                 })
@@ -173,7 +173,7 @@ export default {
             if (this.sort_field) {
                 this.getCharacter({
                     book_id: this.book.url.charAt(this.book.url.length - 1),
-                    gender_filter: val,
+                    gender: val,
                     sort_field: this.sort_field,
                     sort_dir: this.sort_dir
                 })
