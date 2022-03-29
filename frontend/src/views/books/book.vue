@@ -44,7 +44,7 @@
                     </select>
                 </div>
                 <div class="flex flex-1 p-10">
-                    <select v-model="filters.gender" class="form-select appearance-none block
+                    <select v-model="gender" class="form-select appearance-none block
       w-full
       px-3
       py-1.5
