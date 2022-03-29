@@ -21,7 +21,6 @@
       ease-in-out
       m-0
       focus:text-gray-700 mr-2 focus:bg-white focus:border-blue-600 focus:outline-none">
-                        <option value="">Field</option>
                         <option value="name">Name</option>
                         <option value="age">Age</option>
                         <option value="gender">Gender</option>
