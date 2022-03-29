@@ -40,8 +40,8 @@
       m-0
       focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none">
                         <option value="">Direction</option>
-                        <option value="ascending">Ascending</option>
-                        <option value="descending">Descending</option>
+                        <option value="Asc">Ascending</option>
+                        <option value="Desc">Descending</option>
                     </select>
                 </div>
                 <div class="flex flex-1 p-1">
