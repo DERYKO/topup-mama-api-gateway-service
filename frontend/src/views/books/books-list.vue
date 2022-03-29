@@ -1,5 +1,5 @@
 <template>
-    <div v-loading="loading" class="container mx-auto p-10">
+    <div v-loading="loading" class="container mx-auto p-10 w-screen">
         <div class="flex flex-1 mb-10">
             <button @click="toggleSortDir" class="py-2 px-6 border">
                 <svg v-if="sort_dir==='desc'" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"

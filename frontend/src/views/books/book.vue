@@ -1,5 +1,5 @@
 <template>
-    <div v-loading="loading" class="container mx-auto p-10">
+    <div v-loading="loading" class="container mx-auto p-10 w-screen">
         <div class="flex flex-1">
             <h6 class="font-bold text-2xl">{{ book.name }}</h6>
         </div>
